@@ -1,6 +1,9 @@
 # Use the official Python image from the Docker Hub
 FROM python:3.9
 
+#Postgres Client
+RUN apt-get update && apt-get install -y postgresql-client && rm -rf /var/lib/apt/lists/*
+
 # Set the working directory in the container
 WORKDIR /app
 
